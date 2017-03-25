@@ -40,20 +40,3 @@ while (True):
     
 print i,"次迭代完成"
 print round(w1[0].evalf()),round(w1[1].evalf()),round(z.subs([(x,w1[0]),(y,w1[1])]).evalf())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
