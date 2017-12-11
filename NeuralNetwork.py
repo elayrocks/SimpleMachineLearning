@@ -35,7 +35,7 @@ def generate_data():
     
     Y=np.zeros(N*K,dtype='uint8')
     
-    for j in xrange(K):
+    for j in range(K):
         
       ix=range(N*j,N*(j+1))
       
@@ -99,7 +99,7 @@ def totalLoss(X,Y,model):#训练集总损失
 
     precision/=len(X)
     
-    print "精确度:",precision
+    print("精确度:",precision)
 
     reg_loss=0.5*Config.reg_lambda*np.sum(np.square(model['w']))+0.5*Config.reg_lambda*np.sum(np.square(model['v']))
     
@@ -159,7 +159,7 @@ def build_model(X,Y,iters):
         
         model={'v': v, 'w': w, 'b': b, 'c': c}
 
-        print "after",t,"iteration:",totalLoss(X,Y,model)  
+        print("after",t,"iteration:",totalLoss(X,Y,model))
         
     return model    
 

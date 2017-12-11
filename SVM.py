@@ -265,7 +265,7 @@ class SVM(object):
         
         plt.scatter(supportVector[:,0],supportVector[:,1],s=100,c='y',alpha=0.5,marker='o')#标出支持向量
 
-        print "支持向量个数:",len(nonZeroAlpha)
+        print("支持向量个数:",len(nonZeroAlpha))
 
         X1=np.arange(-50.0,50.0,0.1)
     
@@ -321,7 +321,9 @@ def SMO(X,Y,C,epsilon,maxIters):#SMO的主程序
 
                 alphaPairChanges+=SVMClassifier.inner(i)
                     
-            if(alphaPairChanges==0):    iterEntire=True#非边界点全满足KKT条件，则循环遍历整个样本集        
+            if(alphaPairChanges==0):
+
+                iterEntire=True#非边界点全满足KKT条件，则循环遍历整个样本集
             
     return SVMClassifier
 

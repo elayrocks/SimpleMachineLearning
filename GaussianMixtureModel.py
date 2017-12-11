@@ -111,10 +111,10 @@ while(True):#用EM算法迭代求参数估计
     Alpha[0][1]=np.sum(Gamma2/M)/N
     
     if(i%1000==0):
-        print "第",i,"次迭代:"
-        print "Mu:",Mu
-        print "Sigma:",np.sqrt(SigmaSquare)
-        print "Alpha",Alpha
+        print("第",i,"次迭代:")
+        print("Mu:",Mu)
+        print("Sigma:",np.sqrt(SigmaSquare))
+        print("Alpha",Alpha)
 
     #当参数估计不再有显著变化时，退出即可，代码略
     
